@@ -415,7 +415,7 @@ for m in classifiers:
     print('\n')
 
     ############################## export prediction results to csv ##############################
-    csvname = 'model6.' + str(count2) + '.csv'
+    csvname = 'model' + str(count2) + '.csv'
 
     df_pred = pd.DataFrame(y_pred)
     df_test = pd.DataFrame(y_test)
