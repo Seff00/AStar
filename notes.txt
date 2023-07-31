@@ -1,0 +1,74 @@
+filter_files: ensure mtg and xml files are the same
+
+min_rows: find least number of nodes in the mtg files
+
+
+================== steps ====================
+1. convert mtg to csv
+> mtg-to-csv
+
+2. preprocessing (adding features, cleaning, labelling)
+
+> csv preprocessing
+> parameter preprocessing ('r')
+> growth_model_labelling
+
+4. classification training
+> ML_#### 3
+
+5. classification predicting label
+> model_prediction / ML_prediction
+
+=========================================
+6. data cleaning (removing samples that differ from label)
+7. regression training on samples with predicted label
+> parameter_regression
+
+8. regression predicting growth model parameter(s)
+> parameter_prediction
+
+
+
+
+
+
+
+
+
+********** label classification ********
+model1: 
+-decision tree
+
+model2:
+-random forest
+
+model3:
+-naivebayes
+
+model4:
+-KNN
+
+************ parameter regression **********
+
+model5:
+- decision tree
+
+model6:
+- random forest
+
+
+
+
+
+
+
+
+============ stack LIFO algo ===========
+
+3 scenarios:
+
+1. indentation stays the same; neighbour is the previous node
+
+2. indentation stays the increases; neighbour is the previous node
+
+3. indentation stays the decreases; neighbour is the last node of the previous order branch
