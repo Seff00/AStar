@@ -35,32 +35,6 @@ for filename1 in os.listdir(folder1):
             # Copy the file to the destination folder
             shutil.copy(file2, destination_folder)
 
-#--------------------------------------------------min rows--------------------------------------------------#
-
-'''
-to find least number of nodes in the mtg files
-'''
-
-# Folder path containing the csv files (specify directory path)
-folder_path = r"C:\Users\Seth\OneDrive - National University of Singapore\Documents\Internships\AStar\Code\synthesis data\converted csv 2"
-min_rows = np.inf
-
-for file_name in os.listdir(folder_path):                                                   # Iterate over each file in the folder
-
-    # Check if the file is a csv file
-    if file_name.endswith(".csv"):
-
-        # extract csv file
-        csv_file_path = os.path.join(folder_path, file_name)
-
-        df = pd.read_csv(csv_file_path)
-
-        if len(df) < min_rows:
-            min_rows = len(df)
-            # print(file_name)
-
-# print(min_rows)
-
 #--------------------------------------------------mtg to csv conversion--------------------------------------------------#
 
 # Folder path containing the MTG files (specify directory path)
@@ -119,6 +93,32 @@ for file_name in os.listdir(folder_path):                                       
             writer = csv.writer(csv_file)
             # writer.writerow(['Entity Code', 'XX', 'YY', 'ZZ', 'Radius'])          # Write the header row
             writer.writerows(data)                                                  # Write the data rows
+            
+#--------------------------------------------------min rows--------------------------------------------------#
+
+'''
+to find least number of nodes in the mtg files
+'''
+
+# Folder path containing the csv files (specify directory path)
+folder_path = r"C:\Users\Seth\OneDrive - National University of Singapore\Documents\Internships\AStar\Code\synthesis data\converted csv 2"
+min_rows = np.inf
+
+for file_name in os.listdir(folder_path):                                                   # Iterate over each file in the folder
+
+    # Check if the file is a csv file
+    if file_name.endswith(".csv"):
+
+        # extract csv file
+        csv_file_path = os.path.join(folder_path, file_name)
+
+        df = pd.read_csv(csv_file_path)
+
+        if len(df) < min_rows:
+            min_rows = len(df)
+            # print(file_name)
+
+# print(min_rows)
 
 #--------------------------------------------------parameter processing--------------------------------------------------#
 
