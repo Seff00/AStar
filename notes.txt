@@ -43,7 +43,7 @@ model2:
 -random forest
 
 model3:
--naivebayes
+-naive bayes
 
 model4:
 -KNN
