@@ -69,6 +69,6 @@ model6:
 
 1. indentation stays the same; neighbour is the previous node
 
-2. indentation stays the increases; neighbour is the previous node
+2. indentation increases; neighbour is the previous node
 
-3. indentation stays the decreases; neighbour is the last node of the previous order branch
+3. indentation decreases; neighbour is the last node of the previous order branch
